@@ -1,4 +1,7 @@
 @import "components/elements-list";
+@import "components/news-list";
+@import "components/news-card";
+@import "components/page";
 
 * {
     padding: 0;
@@ -11,4 +14,11 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica, 'helvetica neue', Ubuntu, 'segoe ui', arial, sans-serif;
     font-size: 16px;
     line-height: 1.6;
+}
+
+.container {
+    min-width: 900px;
+    max-width: 1024px;
+    padding: 0 25px;
+    margin: 0 auto;
 }

@@ -1,0 +1,89 @@
+.news-card {
+  padding: 15px;
+  text-align: center;
+  width: 25%;
+  flex-shrink: 0;
+
+  &__content {
+    background: rgba(210,210,230,0.20);
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    color: inherit;
+    height: 200px;
+    border-radius: 20px;
+    transition: background ease-in-out 150ms;
+
+    &:hover {
+      background: rgba(0,50,255,0.06);
+      cursor: pointer;
+    }
+
+    &__footer {
+      padding-top: 4px;
+    }
+
+    &__title-outer {
+      line-height: normal;
+      font-weight: bold;
+      font-size: 18px;
+      height: 160px;
+      display: flex;
+    }
+
+    &__title-inner {
+      line-height: normal;
+      font-weight: bold;
+      font-size: 18px;
+      margin: auto;
+      padding-bottom: 5px;
+    }
+
+    &__time {
+      line-height: normal;
+      text-align: right;
+      font-size: 12px;
+      color: darkgray;
+
+      width: 60%;
+      margin-left: 40%;
+    }
+
+
+    &__status-icon {
+      display: block;
+      margin: 0 auto 10px auto;
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+    }
+
+    &__condition {
+      margin-bottom: 20px;
+      font-size: 18px;
+      min-height: 22px;
+    }
+
+    &__temperature {
+      margin-bottom: 20px;
+      font-size: 48px;
+    }
+  }
+
+  &__remove {
+    width: 40%;
+    float: left;
+    background: transparent;
+    border: none;
+    padding: 0;
+    font-weight: 300;
+    font-size: 12px;
+    color: #4362ff;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+      color: #689dff;
+    }
+  }
+}

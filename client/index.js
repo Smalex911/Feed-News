@@ -1,6 +1,4 @@
-import NewsCard from './NewsCard';
+import 'styles/style.scss';
+import {app} from './app';
 
-window.onload = function() {
-    const News = new NewsCard();
-    News.render();
-};
+app.$mount('#news');
