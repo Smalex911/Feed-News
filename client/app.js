@@ -1,23 +1,19 @@
 import Vue from 'vue';
-import List from './components/list/list';
-import Favourites from './components/list/favourites';
+import { sync } from 'vuex-router-sync';
+import App from './components/App';
+import router from './router/router';
 import store from './store/store';
+import Favourites from './components/favourites';
+
+sync(store, router);
 
 const app = new Vue({
     components: {
-        List,
         Favourites
     },
-    render(h) {
-        return (
-            <div class="container" >
-            <h1 class="page__title">Новостная лента</h1>
-            <favourites></favourites>
-            <list></list>
-            </div>
-    );
-    },
-    store
+    router,
+    store,
+    ...App
 });
 
-export { app }
+export { app, router, store }

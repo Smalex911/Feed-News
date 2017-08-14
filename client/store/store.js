@@ -4,8 +4,15 @@ import Vuex from 'vuex';
 Vue.use(Vuex);
 
 const state = {
-    feedNews: window['m_auto'],
-
+    feedNews : window['m_auto'],
+    currentNews : {
+        ts : '',
+        title : '',
+        descr : '',
+        time : '',
+        date : '',
+        url : ''
+    },
     favouriteNews: []
 };
 
@@ -17,6 +24,14 @@ const mutations = {
     addNews(state, city) {
         state.favouriteNews.push(city);
         console.log(state.favouriteNews)
+    },
+
+    setCity (state, id) {
+        state.feedNews.forEach(function(item, i, arr) {
+            if (item.ts === id) {
+                state.currentNews = item;
+            }
+        })
     }
 };
 
