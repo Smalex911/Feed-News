@@ -10,7 +10,7 @@
                 <button
                         class="news-card__remove"
                         @click="addToFav(item)"
-                        v-if="!getFavouriteNews.includes(item)"
+                        v-if="favouritesNewsContains(item)"
                 >Добавить</button>
                 <button
                         class="news-card__remove"
@@ -24,6 +24,8 @@
 </template>
 
 <script>
+    import axios from 'axios';
+
     export default {
         computed: {
             getFeedNews: function() {
@@ -31,15 +33,19 @@
             },
             getFavouriteNews: function() {
                 return this.$store.state.favouriteNews
-            },
+            }
         },
         methods: {
+            favouritesNewsContains: function (item) {
+                return this.$store.state.favouriteNews.find(n => n.ts === item.ts) === undefined;
+            },
+
             removeFromFav: function (item) {
-                this.$store.commit('removeNews', item)
+                this.$store.commit('removeFromFavourite', item)
             },
 
             addToFav: function (item) {
-                this.$store.commit('addNews', item)
+                this.$store.commit('addToFavourite', item)
             }
         }
     }

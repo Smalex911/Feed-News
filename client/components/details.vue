@@ -32,7 +32,7 @@
             }
         },
         mounted() {
-            this.$store.commit('setCity', this.$route.params.newsId);
+            this.$store.dispatch('loadSelectedNews', this.$route.params.newsId);
         }
     }
 </script>
