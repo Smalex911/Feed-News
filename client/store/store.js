@@ -34,10 +34,6 @@ const mutations = {
         console.log(state.favouriteNews)
     },
 
-    setCity (state, ts) {
-        state.currentNews.ts = ts;
-    },
-
     newsLoaded (state, ts) {
         let news = state.feedNews.find(n => ts === n.ts);
         if (news === undefined) {

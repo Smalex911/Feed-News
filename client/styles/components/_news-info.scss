@@ -9,12 +9,12 @@
     padding: 10px;
     display: block;
     color: inherit;
-    height: 200px;
     border-radius: 20px;
     transition: background ease-in-out 150ms;
 
     &__footer {
-      padding-top: 4px;
+      padding: 0 50px;
+      width: 100%;
     }
 
     &__title {
@@ -32,41 +32,71 @@
       color: darkgray;
     }
 
-
-    &__status-icon {
-      display: block;
-      margin: 0 auto 10px auto;
-      width: 64px;
-      height: 64px;
-      border-radius: 50%;
+    &__time {
+      line-height: normal;
+      text-align: right;
+      font-size: 12px;
+      margin-top: 10px;
+      color: lightgray;
+      width: 100%;
     }
 
-    &__condition {
-      margin-bottom: 20px;
-      font-size: 18px;
-      min-height: 22px;
+    &__back-item {
+      width: 50%;
+      padding-left: 25px;
+      text-align: left;
+      text-decoration: none;
+      font-weight: 300;
+      color: #4362ff;
+
+      &:hover {
+        color: #689dff;
+      }
     }
 
-    &__temperature {
-      margin-bottom: 20px;
-      font-size: 48px;
+    &__back-link {
+      width: 50%;
+      float: left;
+      text-decoration: none;
+      font-weight: 300;
+      color: #4362ff;
+
+      &:hover {
+       color: #689dff;
+      }
     }
-  }
+    &__block-remove {
+      width: 50%;
+      margin-left: 50%;
+      margin-right: 30px;
+      text-align: right;
 
-  &__remove {
-    width: 40%;
-    float: left;
-    background: transparent;
-    border: none;
-    padding: 0;
-    font-weight: 300;
-    font-size: 12px;
-    color: #4362ff;
-    cursor: pointer;
+      &__link {
+        font-size: 16px;
 
-    &:hover {
-      text-decoration: underline;
-      color: #689dff;
+        background: transparent;
+        border: none;
+        padding: 0;
+        font-weight: 300;
+        color: #4362ff;
+        cursor: pointer;
+
+        &:hover {
+          color: #689dff;
+        }
+      }
+    }
+
+    &__r {
+      text-align: right;
+
+      width: 50%;
+      margin-left: 50%;
+    }
+
+    &__l {
+      width: 50%;
+      float: left;
     }
   }
 }
