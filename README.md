@@ -1,4 +1,4 @@
-# summer-school-2017
+# Feed news
 
 To start:
 
